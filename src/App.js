@@ -4,21 +4,20 @@ import TodoInput from "./TodoInput";
 import TodoItem from "./TodoItem";
 import "normalize.css";
 import './reset.css';
+import * as localStore from './localStore';
 
 class App extends Component {
   constructor(props){
     super(props)
       this.state={
         newTodo:"",
-        todoList:[
-
-        ]
+        todoList: localStore.load('todoList') || []
     }
   }
   render() {
-    let todos=this.state.todoList.map((item,index)=>{
+    let todos=this.state.todoList.filter((item)=>!item.deleted).map((item,index)=>{
       return (<li key={index} >
-        <TodoItem todo={item.title}/>
+        <TodoItem todo={item} onToggle={this.toggle.bind(this)} onDelete={this.delete.bind(this)} />
       </li>)
     })
     return (
@@ -27,12 +26,15 @@ class App extends Component {
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />
         </div>
-        <ol>
+        <ol className="todoList">
           {todos}
         </ol>
       </div>
     );
   }
+    componentDidUpdate(){
+      localStore.save('todoList', this.state.todoList)
+    }
   addTodo(e){
     var value=e.target.value;
     this.state.todoList.push({
@@ -52,6 +54,15 @@ class App extends Component {
       newTodo: e.target.value,
       todoList: this.state.todoList
     })
+  }
+  toggle(e,todo){
+    todo.status=todo.status==="completed"?"":"completed";
+    this.setState(this.state);
+  }
+  delete(e,todo){
+    todo.deleted=true;
+    this.setState(this.state);
+    console.log(this.state);
   }
 }
 

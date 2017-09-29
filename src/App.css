@@ -26,3 +26,9 @@
 h1{
   font-weight: normal; font-size: 1.8em !important; margin: 1.47em 0 1em !important;
 }
+.App > .todoList> li:nth-child(odd){
+  background: #eee;
+}
+.App > .todoList> li:nth-child(even){
+   background: transparent;
+ }
