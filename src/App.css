@@ -1,28 +1,28 @@
 .App {
   text-align: center;
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: white;
+  margin: 3em auto 0;
+  padding: 0 2em;
+  min-height: 46em;
+  min-width: 20em; max-width: 38em;
+  -webkit-box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
+  box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App > .todoList> li:nth-child(odd){
+  background: #eee;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App > .todoList> li:nth-child(even){
+  background: transparent;
 }
-
-.App-title {
-  font-size: 1.5em;
+.todoList{
+  padding-left: 0;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h1{
+  font-weight: normal; font-size: 1.8em !important; margin: 1.47em 0 1em !important;
 }
