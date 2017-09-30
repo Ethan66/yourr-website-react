@@ -4,7 +4,11 @@ import './UserDialog.css'
   constructor(props){
     super(props)
     this.state={
-      selected: "signUp"
+      selected: "signUp",
+      formDate: {
+        username: "",
+        password: ""
+      }
     }
   }
   render(){
@@ -12,7 +16,7 @@ import './UserDialog.css'
           <form className="signUp"> {/* 注册*/}
               <div className="row">
                 <label>用户名</label>
-                <input type="text"/>
+                <input type="text" value={this.state.formDate.username} onChange={this.changeUsername.bind(this)}/>
               </div>
               <div className="row">
                 <label>密码</label>
@@ -58,4 +62,9 @@ import './UserDialog.css'
           selected: e.target.value
         })
       }
+    changeUsername(e){
+      let stateCopy = JSON.parse(JSON.stringify(this.state))
+          stateCopy.formData.username = e.target.value
+            this.setState(stateCopy)
+    }
 }
