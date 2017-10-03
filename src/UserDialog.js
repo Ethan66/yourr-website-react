@@ -5,7 +5,7 @@ import './UserDialog.css'
     super(props)
     this.state={
       selected: "signUp",
-      formDate: {
+      formData: {
         username: "",
         password: ""
       }
@@ -13,14 +13,14 @@ import './UserDialog.css'
   }
   render(){
     let signUpForm = (
-          <form className="signUp"> {/* 注册*/}
+          <form className="signUp" onSubmit={this.signUp.bind(this)}> {/* 注册*/}
               <div className="row">
                 <label>用户名</label>
-                <input type="text" value={this.state.formDate.username} onChange={this.changeUsername.bind(this)}/>
+                <input type="text" value={this.state.formData.username} onChange={this.changeFormData.bind(this,'username')}/>
               </div>
               <div className="row">
                 <label>密码</label>
-                <input type="password"/>
+                <input type="password" value={this.state.formData.password} onChange={this.changeFormData.bind(this,'password')}/>
               </div>
               <div className="row actions">
                 <button type="submit">注册</button>
@@ -28,14 +28,14 @@ import './UserDialog.css'
             </form>
           )
         let signInForm = (
-          <form className="signIn"> {/* 登录*/}
+          <form className="signIn" onSubmit={this.signIn.bind(this)}> {/* 登录*/}
               <div className="row">
                 <label>用户名</label>
-                <input type="text"/>
+                <input type="text" value={this.state.formData.username} onChange={this.changeFormData.bind(this,'username')}/>
               </div>
               <div className="row">
                 <label>密码</label>
-                <input type="password"/>
+                <input type="password" value={this.state.formData.password} onChange={this.changeFormData.bind(this,'password')}/>
              </div>
               <div className="row actions">
                 <button type="submit">登录</button>
@@ -62,9 +62,15 @@ import './UserDialog.css'
           selected: e.target.value
         })
       }
-    changeUsername(e){
-      let stateCopy = JSON.parse(JSON.stringify(this.state))
-          stateCopy.formData.username = e.target.value
-            this.setState(stateCopy)
+    changeFormData(key,e){
+      let stateCopy = JSON.parse(JSON.stringify(this.state));
+        stateCopy.formData[key]=e.target.value;
+        this.setState(stateCopy);
+    }
+    signUp(e){
+
+    }
+    signIn(e){
+
     }
 }
