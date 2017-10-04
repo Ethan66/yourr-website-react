@@ -72,7 +72,7 @@ import {signUp} from './leanCloud'
         e.preventDefault()
             let {username, password} = this.state.formData
                 let success = (user)=>{
-                  console.log(user)
+                  this.props.onSignUp.call(null, user)
                 }
             let error = (error)=>{
                   console.log(error)

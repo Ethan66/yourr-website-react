@@ -22,7 +22,6 @@ export function signUp(username, password, successFn, errorFn){
                   }, function (error) {
                 errorFn.call(null, error)
               })
-
           return undefined
 
         }
