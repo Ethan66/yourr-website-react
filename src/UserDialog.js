@@ -78,7 +78,7 @@ import {signUp,signIn} from './leanCloud'
         e.preventDefault()
             let {username, password} = this.state.formData
                 let success = (user)=>{
-                  this.props.onSignUp.call(null, user)
+                  this.props.onSignUpOrSignIn.call(null, user)
                 }
             let error = (error)=>{
                 alert(error)
@@ -89,7 +89,7 @@ import {signUp,signIn} from './leanCloud'
         e.preventDefault()
             let {username, password} = this.state.formData
                 let success = (user)=>{
-                  this.props.onSignIn.call(null, user)
+                  this.props.onSignUpOrSignIn.call(null, user)
                 }
             let error = (error)=>{
                   alert(error)
