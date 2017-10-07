@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './UserDialog.css'
 import {signUp,signIn} from './leanCloud'
+import deepCopy from "./deepCopy";
   export default class UserDialog extends Component{
   constructor(props){
     super(props)
@@ -70,7 +71,8 @@ import {signUp,signIn} from './leanCloud'
         })
       }
     changeFormData(key,e){
-      let stateCopy = JSON.parse(JSON.stringify(this.state));
+          let stateCopy=deepCopy(this.state);
+      // let stateCopy = JSON.parse(JSON.stringify(this.state));
         stateCopy.formData[key]=e.target.value;
         this.setState(stateCopy);
     }
@@ -85,6 +87,18 @@ import {signUp,signIn} from './leanCloud'
                     case 202:
                       alert('用户名已被占用')
                       break
+                    case 201:
+                        alert('密码不能为空')
+                        break
+                    case 200:
+                        alert('用户名不能为空')
+                        break
+                    case 217:
+                        alert('无效的用户名，不允许空白用户名')
+                        break
+                    case 218:
+                        alert('无效的密码，不允许空白密码')
+                        break
                     default:
                       alert(error)
                       break
@@ -103,6 +117,16 @@ import {signUp,signIn} from './leanCloud'
                     case 210:
                       alert('用户名与密码不匹配')
                       break
+                    case 201:
+                        alert('密码不能为空')
+                        break
+                    case 200:
+                        alert('用户名不能为空')
+                        break
+                    case 211:
+                        alert('用户名不存在')
+                        break
+
                     default:
                       alert(error)
                       break
