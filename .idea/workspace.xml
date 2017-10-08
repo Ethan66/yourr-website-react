@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e03916-edcc-416c-9b8b-129f17056710" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserDialog.js" afterPath="$PROJECT_DIR$/src/UserDialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +20,9 @@
       <file leaf-file-name="UserDialog.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="108" column="19" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="108" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1653">
+              <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -42,7 +40,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="589">
               <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="82" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -58,12 +56,7 @@
               <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-                <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
                 <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-                <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-                <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-                <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -114,9 +107,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -136,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,6 +142,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -259,15 +251,18 @@
       <workItem from="1506944255516" duration="340000" />
       <workItem from="1506990726173" duration="5989000" />
       <workItem from="1507113270735" duration="5530000" />
-      <workItem from="1507271384808" duration="2328000" />
+      <workItem from="1507271384808" duration="2925000" />
+      <workItem from="1507341438638" duration="597000" />
+      <workItem from="1507458568516" duration="578000" />
+      <workItem from="1507459301090" duration="385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20543000" />
+    <option name="totallyTimeSpent" value="22700000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="0" width="1936" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09947917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -300,13 +295,106 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodoInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="82" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodoInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodoInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -326,12 +414,7 @@
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
             <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-            <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -340,9 +423,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -377,12 +458,7 @@
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
             <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-            <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -438,12 +514,7 @@
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
             <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-            <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -513,12 +584,7 @@
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
             <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-            <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -609,12 +675,7 @@
           <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1506777625119" expanded="true" signature="99:409" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="111:285" ph="{...}" />
             <marker date="1506777625119" expanded="true" signature="124:281" ph="&lt;input/&gt;" />
-            <marker date="1506777625119" expanded="true" signature="297:361" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="322:359" ph="{...}" />
-            <marker date="1506777625119" expanded="true" signature="376:407" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -623,14 +684,14 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="589">
           <caret line="38" column="82" lean-forward="false" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="82" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -640,11 +701,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserDialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="108" column="19" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="108" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1653">
+          <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
