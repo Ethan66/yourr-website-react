@@ -5,7 +5,7 @@ import TodoItem from "./TodoItem";
 import "normalize.css";
 import './reset.css';
 import UserDialog from './UserDialog';
-import {getCurrentUser, signOut} from './leanCloud';
+import {getCurrentUser, signOut, TodoModel} from './leanCloud';
 import deepCopy from './deepCopy';
 
 
@@ -57,15 +57,20 @@ class App extends Component {
     }
   addTodo(e){
     var value=e.target.value;
-    this.state.todoList.push({
-      id:idmaker(),
+      let newTodo = {
       title:value,
       status: null,
       deleted: false
-    });
-    this.setState({
-      newTodo:"",
-      todoList:this.state.todoList
+    }
+    TodoModel.create(newTodo, (id) => {
+      newTodo.id = id
+      this.state.todoList.push(newTodo)
+      this.setState({
+        newTodo: '',
+        todoList: this.state.todoList
+      })
+    }, (error) => {
+       console.log(error)
     })
     console.log(this.state);
   }
@@ -88,7 +93,3 @@ class App extends Component {
 
 export default App;
 
-let id=0;
-function idmaker(){
-  return ++id
-}
