@@ -67,7 +67,7 @@ class App extends Component {
     var value=e.target.value;
       let newTodo = {
       title:value,
-      status: null,
+      status: '',
       deleted: false
     }
     TodoModel.create(newTodo, (id) => {
