@@ -36,6 +36,9 @@ import SignInOrSignUp from './SignInOrSignUp'
                           onSignIn={this.returnToSignIn.bind(this)}
                       />
                   }
+                  <div className="img">
+
+                  </div>
               </div>
             </div>
           )

@@ -1,26 +1,76 @@
 .UserDialog-Wrapper{
   /*全屏*/      position: fixed; top: 0; left: 0; bottom: 0; right: 0;
   /*内容居中*/  display: flex; justify-content: center; align-items: center;
-   background: hsla(0,0%,0%,0.40);
+   /*background: hsla(0,0%,0%,0.40);*/
+   background: #F5F7FA;
 }
 .UserDialog{
-   border: 1px solid;
-   border-radius: 4px;
-   min-width: 20em;
-   background: white;
-   border: 1px solid #aaa;
-    box-shadow: 0 0 1em hsla(0,0%,0%,0.35);
+   border-radius: 6px; background: #fff;
+   box-shadow: 0 0 1em rgba(0,0,0,.2); overflow: hidden;
 }
+.clearfix:after{
+   display: block; content: ""; clear: both;
+}
+.UserDialog .signInOrSignUp{
+   width: 20em; float: left; padding: 6em 2em 1em;
+}
+.UserDialog .signInOrSignUp>h1{
+   font-weight: bold;
+}
+.UserDialog form>.row{
+   display: flex; margin-bottom: 1em;
+}
+.UserDialog form label{
+   position: absolute; height: 2.4em; display: flex; justify-content: center; align-items: center; border-right: 1px solid #ccc;
+}
+.UserDialog form label i{
+   font-size: 1.2em; margin-left: 0.1em; color: #aaa;
+}
+.UserDialog form label i.icon-youxiang{
+   font-size: 1.3em; margin-top: 0.2em;
+}
+.UserDialog form input{
+   width: 100%; height: 2.4em; padding-left: 2.7em; border: 1px solid #ccc; border-radius: 4px; text-indent: 1em;
+}
+.UserDialog form>.row.actions{
+   padding: 0 !important;
+}
+.UserDialog button{
+   border: none; border-radius: 4px; background: #4786FF; margin: 0 !important; color: #fff;
+   cursor: pointer; box-shadow: 0 0.2em 0.6em rgba(71,144,255,.5);
+}
+.UserDialog button:hover{
+   background: #3B7CFC;
+}
+.UserDialog form>.row.actions button{
+   width: 100%; height: 2.6em;
+}
+.UserDialog .change .line{
+   border-top: 1px dashed #ccc; margin: 1.8em 0 1em;
+}
+.UserDialog .change .line span{
+   background: #fff; padding: 0 1em; position: relative; top: -0.6em;
+}
+.UserDialog .change .text span{
+   line-height: 2em;
+}
+.UserDialog .change .text button{
+    width: 5em; height: 2em; float: right;
+}
+
+
 .UserDialog .signInOrSignUp > nav:first-child{ padding: 1em; margin-left: -2em;}
 .UserDialog .signInOrSignUp > nav:first-child label{ margin-left: 2em; cursor: pointer;}
-.UserDialog .signInOrSignUp > .panes { padding: 0 1em 1em; }
 
 .UserDialog .forgotPassword > h3 { padding: 1em; }
 +.UserDialog .forgotPassword > form { padding: 0 1em 1em; }
-
-.UserDialog form>.row{ display: flex; padding: .3em 0; }
-.UserDialog form>.row>label:first-child{ width: 4em; }
+.UserDialog form>.row>label:first-child{ width: 2.7em; }
 .UserDialog form>.row.actions{ padding-left: 4em; cursor: pointer; }
 .UserDialog form>.row.actions{ padding-left: 4em; display: flex; align-items: center;}
 .UserDialog form>.row.actions button{ margin-right: .5em; }
 .UserDialog button{font: inherit; padding: .2em;}
+
+.UserDialog>.img{
+   min-width: 46em; height: 37em; margin-left: 20em;
+   background: url(./bg1.jpeg) no-repeat;
+}
