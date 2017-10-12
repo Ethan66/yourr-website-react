@@ -7,8 +7,9 @@ class TodoItem extends Component{
    return (
        <div className="TodoItem">
          <input type="checkbox" check="true" onChange={this.toggle.bind(this)} />
-         <span className="title">{this.props.todo.title}</span>
-         <button onClick={this.delete.bind(this)}>删除</button>
+         <i className="iconfont icon-gou"></i>
+         <p><span className="title">{this.props.todo.title}</span></p>
+         <p><span className="time1">10:00-11:00</span><i className="iconfont icon-shanchu" onClick={this.delete.bind(this)}></i></p>
        </div>
    )
   }

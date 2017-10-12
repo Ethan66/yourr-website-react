@@ -13,6 +13,11 @@ function changeTitle (props, e) {
     props.onChange(e)
   }
   export default function (props) {
-  return <input type = "text" value = {props.content} className = "TodoInput" onChange = {changeTitle.bind(null, props)}
-    onKeyPress={submit.bind(null, props)}/>
+  return (
+    <div>
+      <input placeholder="请输入待办事件" type = "text" value = {props.content} className = "TodoInput" onChange = {changeTitle.bind(null, props)}
+      onKeyPress={submit.bind(null, props)}/>
+      <input placeholder="请输入时间" type="text" />
+    </div>
+    )
 }

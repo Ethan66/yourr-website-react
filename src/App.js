@@ -35,16 +35,75 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <h1>{this.state.user.username|| "我"}的待办
-            {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
-        </h1>
-        <div className="inputWrapper">
-          <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />
+      <div className="date">
+      <div className="show">
+      <i className="arrow left"></i>
+      <p><span>十</span>月 <b>2017</b></p>
+      <i className="arrow right"></i>
+      </div>
+      <table>
+      <tr>
+      <th>一</th>
+      <th>二</th>
+      <th>三</th>
+      <th>四</th>
+      <th>五</th>
+      <th>六</th>
+      <th>日</th>
+      </tr>
+      <tr>
+      <td><span>1</span></td>
+      <td><span>2</span></td>
+      <td><span>3</span></td>
+      <td><span>4</span></td>
+      <td><span>5</span></td>
+      <td><span>6</span></td>
+      <td><span>7</span></td>
+      </tr>
+      <tr>
+      <td><span className="current">11</span></td>
+      <td><span className="data">12</span></td>
+      <td><span>13</span></td>
+      <td><span>14</span></td>
+      <td><span>15</span></td>
+      <td><span>16</span></td>
+      <td><span>17</span></td>
+      </tr>
+      <tr>
+      <td><span>1</span></td>
+      <td><span>2</span></td>
+      <td><span>3</span></td>
+      <td><span>4</span></td>
+      <td><span>5</span></td>
+      <td><span>6</span></td>
+      <td><span>7</span></td>
+      </tr>
+      <tr>
+      <td><span>1</span></td>
+      <td><span>2</span></td>
+      <td><span>3</span></td>
+      <td><span>4</span></td>
+      <td><span>5</span></td>
+      <td><span>6</span></td>
+      <td><span>7</span></td>
+      </tr>
+      </table>
+      </div>
+        <div className="todo">
+          <div className="time">
+             2017年10月11日
+          </div>
+          <h1>{this.state.user.username|| "我"}
+              {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
+          </h1>
+          <div className="inputWrapper">
+            <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />
+          </div>
+          <ol className="todoList">
+            {todos}
+          </ol>
+            {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)} onSignIn={this.onSignUpOrSignIn.bind(this)}/>}
         </div>
-        <ol className="todoList">
-          {todos}
-        </ol>
-          {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUpOrSignIn.bind(this)} onSignIn={this.onSignUpOrSignIn.bind(this)}/>}
       </div>
     );
   }
