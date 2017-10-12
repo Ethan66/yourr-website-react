@@ -6,7 +6,7 @@ export default class SignInOrSignUp extends Component {
   constructor (props) {
       super(props)
       this.state = {
-              selected: 'signUp'
+              selected: this.props.returnSignIn?this.props.returnSignIn:'signUp'
           }
   }
 
@@ -46,9 +46,9 @@ export default class SignInOrSignUp extends Component {
             <div className="change">
               <p className="line"><span>or</span></p>
       {this.state.selected==='signUp'?<p className="text clearfix">
-                <span>已有账号，点击</span><button value="signIn" onClick={this.switch.bind(this)}>登录</button>
+                <span>已有账号，点击登录</span><button value="signIn" onClick={this.switch.bind(this)}>登录</button>
               </p>:
-              <p className="text clearfix">
+              <p className="text back clearfix">
                 <button value="signUp" onClick={this.switch.bind(this)}>返回注册</button>
               </p>}
             </div>

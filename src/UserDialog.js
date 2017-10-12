@@ -8,6 +8,7 @@ import SignInOrSignUp from './SignInOrSignUp'
   constructor(props){
     super(props)
     this.state={
+      returnSignIn:"",
       selectedTab: 'signInOrSignUp', // 'forgotPassword'
       formData: {
         email: '',
@@ -23,6 +24,7 @@ import SignInOrSignUp from './SignInOrSignUp'
                   {
                       this.state.selectedTab === 'signInOrSignUp' ?
                           <SignInOrSignUp
+                              returnSignIn={this.state.returnSignIn}
                               formData={this.state.formData}
                               onSignIn={this.signIn.bind(this)}
                               onSignUp={this.signUp.bind(this)}
@@ -51,6 +53,7 @@ import SignInOrSignUp from './SignInOrSignUp'
       returnToSignIn(){
           let stateCopy = JSON.parse(JSON.stringify(this.state))
           stateCopy.selectedTab = 'signInOrSignUp'
+          stateCopy.returnSignIn='signIn'
           this.setState(stateCopy)
       }
       resetPassword(e){
@@ -67,7 +70,10 @@ import SignInOrSignUp from './SignInOrSignUp'
         e.preventDefault()
             let {email,username, password} = this.state.formData
                 let success = (user)=>{
-                  this.props.onSignUp.call(null, user)
+                  window.location.reload();
+                  setTimeout(function(){
+                    this.props.onSignUp.call(null, user)
+                  }.bind(this),3000)
                 }
             let error = (error)=>{
                 switch(error.code){
@@ -97,7 +103,10 @@ import SignInOrSignUp from './SignInOrSignUp'
         e.preventDefault()
             let {username, password} = this.state.formData
                 let success = (user)=>{
-                  this.props.onSignIn.call(null, user)
+                  window.location.reload();
+                  setTimeout(function(){
+                    this.props.onSignIn.call(null, user)
+                  }.bind(this),3000);
                 }
             let error = (error)=>{
                 switch(error.code){

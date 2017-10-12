@@ -60,7 +60,7 @@ class App extends Component {
       // let stateCopy = JSON.parse(JSON.stringify(this.state))
       stateCopy.user = user
       this.setState(stateCopy)
-}
+    }
     componentDidUpdate(){
     }
   addTodo(e){
