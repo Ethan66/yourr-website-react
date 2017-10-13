@@ -22,12 +22,13 @@ export const TodoModel = {
       errorFn && errorFn.call(null, error)
     })
   },
-  create({status, title, deleted}, successFn, errorFn){
+  create({status, title, deleted,time}, successFn, errorFn){
     let Todo = AV.Object.extend('Todo') // 记得把多余的分号删掉，我讨厌分号
     let todo = new Todo()
     todo.set('title', title)
     todo.set('status', status)
     todo.set('deleted', deleted)
+    todo.set('time',time)
     // 根据文档 https://leancloud.cn/docs/acl-guide.html#单用户权限设置
     // 这样做就可以让这个 Todo 只被当前用户看到
     let acl = new AV.ACL()

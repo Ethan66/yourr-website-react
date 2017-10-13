@@ -2,9 +2,10 @@ import React from "react";
 import './TodoInput.css';
 
 function submit (props) {
-  console.log()
-  let value=document.querySelector(".TodoInput").value.trim();
-  if(value!==''){
+  let value={}
+  value.newTodo=document.querySelector(".TodoInput").value.trim();
+  value.newTime=document.querySelector(".TimeTodo").value.trim();
+  if(value.newTodo!==''&&value.newTime){
     props.onSubmit(value)
   }
 }
