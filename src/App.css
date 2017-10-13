@@ -1,10 +1,9 @@
 .App {
   display: flex; text-align: center;
-  color: #333; background: #F7F7FF;
-  border: 1px solid #aaa;
-  border-radius: 6px;
+  color: #333; background: #F9FAFF;
+  border-radius: 10px;
   margin: 3em auto 0;
-  max-width: 64em;
+  max-width: 61.8em;
   -webkit-box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
   -webkit-box-sizing: border-box;
@@ -23,12 +22,24 @@
 h1{
   font-weight: normal; font-size: 1.8em !important; margin: 1.47em 0 1em !important;
 }
+.App>.todo > .todoList{
+  max-height: 23em; overflow-y: scroll; margin-right: -1em; padding-left: 2em;
+}
 .App>.todo > .todoList> li:nth-child(odd){
   background: #eee;
 }
 .App>.todo > .todoList> li:nth-child(even){
    background: transparent;
  }
+.App>.todo>.time+h1{
+  position: relative;
+}
+.icon-out{
+  font-size: 1.2em; position: absolute; right: 0.5em; bottom:-0.2em; color: #b6b7bb;
+}
+.icon-out:hover{
+  color: #8a8a8c; cursor: pointer;
+}
 
 .date{
   display: inline-block; background: #fff; height: 46em;
@@ -65,29 +76,29 @@ h1{
   line-height: 2.8em;
 }
 .date>table .data{
-  position: relative;
-}
-.date>table .data:after{
-  display: block; content: ""; width: 1.4em; border: 2px solid #3AE49B; border-radius: 3px; position: absolute; left: -0.1em; bottom: -0.2em;
+  position: relative; color: #34b980;
 }
 
 
 .todo{
-  padding-left: 2em; width: 23em;
+  width: 21em;
 }
 .todo .time{
-  margin: 3em 0 2em; text-align: left;
+  margin: 3em 0 2em; text-align: right; padding-right: 1.4em; color: #999;
+}
+.todo .time em{
+  font-style: normal;
 }
 .todo h1{
-  color: #2C49EC; font-size: 1.5em !important; text-align: left;
+  color: #D68AF2; font-size: 1.5em !important; text-align: left; padding-left: 1em;
 }
 
 
 .inputWrapper{
-   margin-left: -2em; margin-bottom: 2em; padding: 1.2em 1em 1em 1.6em;
-  background: -moz-linear-gradient(left,  rgba(58,228,155,1) 0%, rgba(58,228,155,0.65) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(58,228,155,1) 0%,rgba(58,228,155,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(58,228,155,1) 0%,rgba(58,228,155,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ae49b', endColorstr='#a63ae49b',GradientType=1 ); /* IE6-9 */
+  margin-bottom: 3em; padding: 1.2em 1em 1em 1.6em;
+  background: -moz-linear-gradient(left, rgba(239,160,73,1) 0%, rgba(239,160,73,0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(239,160,73,1) 0%,rgba(239,160,73,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(239,160,73,1) 0%,rgba(239,160,73,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efa049', endColorstr='#80efa049',GradientType=1 ); /* IE6-9 */
 
 }

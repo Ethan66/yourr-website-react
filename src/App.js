@@ -91,10 +91,10 @@ class App extends Component {
       </div>
         <div className="todo">
           <div className="time">
-             2017年10月11日
+             <span>2017年10月11日</span> <em>周一</em>
           </div>
           <h1>{this.state.user.username|| "我"}
-              {this.state.user.id ? <button onClick={this.signOut.bind(this)}>登出</button> : null}
+              {this.state.user.id ? <i className="iconfont icon-out" onClick={this.signOut.bind(this)}></i> : null}
           </h1>
           <div className="inputWrapper">
             <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />

@@ -1,13 +1,11 @@
-.TodoItem{
-
-}
 .TodoItem>.title{
    flex-grow: 1;
    padding: 0 .5em;
  }
 .TodoItem{
-    margin-bottom: 1em; border-top-left-radius: 10px; border-bottom-left-radius: 10px;
-    text-align: left; padding: .8em .6em 1.2em 2.3em; color: #fff; position: relative;
+    margin-bottom: 3em; border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+    text-align: left; padding: .8em .6em 1em 2.3em; color: #fff; position: relative;
+
     background: #8294fb; /* Old browsers */
     background: -moz-linear-gradient(45deg, #8294fb 0%, #8294fb 27%, #9eafff 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(45deg, #8294fb 0%,#8294fb 27%,#9eafff 100%); /* Chrome10-25,Safari5.1-6 */
@@ -18,20 +16,20 @@
     display: block; content:""; width: 0.8em; height: 0.8em; border-radius: 50%; background: #fff; position: absolute; left: 0.8em; top: 1em;
 }
 .TodoItem input{
-    width: 1.2em; height: 1.2em; position: absolute; left: -1.6em; z-index: 6; opacity: 0;
+    width: 1.2em; height: 1.2em; position: absolute; left: -1.5em; top: 1.6em; z-index: 6; opacity: 0;
 }
 .TodoItem p+p{
     margin-top: .6em;
 }
 .TodoItem .icon-gou{
-    display: block; width: 1.2em; height: 1.2em; border: 1px solid #bbb; border-radius: 3px; background: #fff;
-    position: absolute; left: -1.6em;
+    display: block; width: 1.2em; height: 1.2em; border: 1px solid #ccc; border-radius: 3px; background: #F7F7FF;
+    position: absolute; left: -1.5em; top: 1.6em; color: #F7F7FF;
 }
 .TodoItem input:checked+.icon-gou{
-    color: #2C49EC;
+    color: #949698; border: none;
 }
 .TodoItem .icon-shanchu{
-    font-size: 1.5em; position: absolute; right: 0.8em; bottom: .3em; color: #f7f7f7;
+    font-size: 1.4em; position: absolute; right: 0.8em; bottom: .6em; color: #f7f7f7;
 }
 .TodoItem .icon-shanchu:hover{
     color: #fff; cursor: pointer;
