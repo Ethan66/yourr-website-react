@@ -19,12 +19,15 @@ function submit (props) {
 function changeTitle (props, e) {
     props.onChange(e)
   }
+function changeTime(props,e){
+  props.onChangeTime(e)
+}
   export default function (props) {
   return (
     <div>
       <input placeholder="请输入待办事件" type = "text" value = {props.content} className = "TodoInput" onChange = {changeTitle.bind(null, props)}
       />
-      <input placeholder="请输入时间" type="text" />
+      <input placeholder="请输入时间" type="text" value={props.time1} className="TimeTodo" onChange={changeTime.bind(null,props)} />
       <span className="iconfont icon-add" onClick={submit.bind(null, props)}></span>
     </div>
     )

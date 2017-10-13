@@ -16,6 +16,7 @@ class App extends Component {
       this.state={
        user: getCurrentUser() || {},
         newTodo:"",
+        newTime:"",
         todoList: []
     }
     let user = getCurrentUser()
@@ -97,7 +98,8 @@ class App extends Component {
               {this.state.user.id ? <i className="iconfont icon-out" onClick={this.signOut.bind(this)}></i> : null}
           </h1>
           <div className="inputWrapper">
-            <TodoInput content={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)} />
+            <TodoInput content={this.state.newTodo} time1={this.state.newTime} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)}
+            onChangeTime={this.changeTime.bind(this)} />
           </div>
           <ol className="todoList">
             {todos}
@@ -144,6 +146,12 @@ class App extends Component {
     this.setState({
       newTodo: e.target.value,
       todoList: this.state.todoList
+    })
+  }
+  changeTime(e){
+    this.setState({
+      newTime:e.target.value,
+      todoList:this.state.todoList
     })
   }
   toggle(e,todo){
