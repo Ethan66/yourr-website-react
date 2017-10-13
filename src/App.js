@@ -122,8 +122,7 @@ class App extends Component {
     }
     componentDidUpdate(){
     }
-  addTodo(e){
-    var value=e.target.value;
+  addTodo(value){
       let newTodo = {
       title:value,
       status: '',
