@@ -42,12 +42,13 @@ export const TodoModel = {
       errorFn && errorFn.call(null, error)
     });
   },
-  update({id, title, status, deleted}, successFn, errorFn){
+  update({id, title, status, deleted,time}, successFn, errorFn){
     // 文档 https://leancloud.cn/docs/leanstorage_guide-js.html#更新对象
     let todo = AV.Object.createWithoutData('Todo', id)
     title !== undefined && todo.set('title', title)
     status !== undefined && todo.set('status', status)
     deleted !== undefined && todo.set('deleted', deleted)
+    time !== undefined && todo.set('time', time)
     // 为什么我要像上面那样写代码？
     // 考虑如下场景
     // update({id:1, title:'hi'})
@@ -64,7 +65,7 @@ export const TodoModel = {
   },
   destroy(todoId, successFn, errorFn){
     // 我们不应该删除数据，而是将数据标记为 deleted
-    +    TodoModel.update({id: todoId, deleted: true}, successFn, errorFn)
+        TodoModel.update({id: todoId, deleted: true}, successFn, errorFn)
   }
 }
 
