@@ -1,15 +1,17 @@
 import React,{Component} from "react";
+import $ from 'jquery';
+import {datePicker} from './date_module';
 
 export default class DateTable extends Component{
   render(){
     return (
-      <div className="date">
-      <div className="show">
-      <i className="arrow left"></i>
-      <p><span>十</span>月 <b>2017</b></p>
-      <i className="arrow right"></i>
+      <div className="date" ondefault={this.default1.call(this)}>
+      <div className="show header">
+      <i className="arrow left pre caret-left"></i>
+      <p className="cur"><span>十</span>月 <b>2017</b></p>
+      <i className="arrow right next caret-right"></i>
       </div>
-      <table>
+      <table className="panel">
       <tbody>
       <tr>
       <th>一</th>
@@ -60,5 +62,9 @@ export default class DateTable extends Component{
       </table>
       </div>
     )
+    // $('.date').datePicker();
+  }
+  default1(){
+    // console.log(datePicker($('.date')));
   }
 }

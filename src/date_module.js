@@ -1,9 +1,13 @@
+import React from 'react';
+import $ from 'jquery';
+
+
 function DatePicker($target) {
   //初始化当前日期
   this.init($target);
 
   //渲染日历模板
-  this.render();
+  this.render1();
 
   //设置模板里面的数据
   this.setData();
@@ -26,7 +30,7 @@ DatePicker.prototype = {
 
   },
 
-  render: function() {
+  render1: function() {
     var tpl = '<div class="ui-date-picker" style="display:none">'
       +    '<div class="header"><span class="pre caret-left"></span><span class="cur header-date"></span><span class="next caret-right"></span></div>'
       +    '<table class="panel">'
@@ -36,8 +40,7 @@ DatePicker.prototype = {
     this.$datepicker = $(tpl);
     this.$datepicker.insertAfter(this.$target)
       .css({
-        'position': 'absolute',
-        'left': this.$target.offset().left,
+        'position': 'absolute', 'left': this.$target.offset().left,
         'top': this.$target.offset().top + this.$target.height(true)
       });
   },
@@ -139,7 +142,8 @@ DatePicker.prototype = {
     var year = date.getFullYear(),
       month = date.getMonth();
 
-    return newDate = new Date(year, month, 1);
+    var newDate = new Date(year, month, 1);
+    return newDate
   },
 
 
@@ -210,10 +214,16 @@ DatePicker.prototype = {
 
 
 //变成 jquery 插件
-$.fn.datePicker = function() {
+/*$.fn.datePicker = function() {
   this.each(function(){
     new DatePicker($(this));
   });
-};
+};*/
 
-$('.date-ipt').datePicker();
+// $('.date-ipt').datePicker();
+
+export function datePicker($tal){
+  new DatePicker($tal);
+}
+
+
