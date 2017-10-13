@@ -42,7 +42,7 @@ h1{
 }
 
 .date{
-  display: inline-block; background: #fff; height: 46em;
+  display: inline-block; height: 46em; background: url(./bg4.jpg) no-repeat -13em; background-size: cover;
 }
 .date b{
   font-weight: normal;
